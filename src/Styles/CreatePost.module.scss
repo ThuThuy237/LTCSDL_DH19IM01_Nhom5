@@ -1,0 +1,92 @@
+$them-color: #fa8914;
+$secondary-color: #38b6ff;
+
+
+.hidden{
+    display: none;
+}
+.stepContainer{
+
+    .header{
+        width: 100%;
+        text-align: center;
+    }
+
+    .stepContent{
+        width: 60%;
+        margin: 50px auto;
+
+        .btnPriPub{
+            padding: 30px 15px;
+            border : 1px solid #ccc;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(97, 97, 97, 0.1);
+            }
+
+            .title{
+                font-size: 1.6rem;
+                font-weight: 450;
+            }
+        }
+        .btnPriPubDisable{
+            @extend .btnPriPub;
+            cursor: not-allowed;
+
+            span{
+                margin: auto;
+            }
+        }
+
+        .btnPriPubChoose{
+            @extend .btnPriPub;
+            background-color: rgba(97, 97, 97, 0.1);
+            border : 2px solid rgb(27, 27, 27);
+        }
+        .inputName{
+            width: 70%;
+            height: 3rem;
+        }
+        .selectCate{
+            width: 70%;
+            height: 3rem;
+
+            div{
+                height: 100%;
+                align-items: center;
+            }
+        }
+    }
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+
+    .btnPre{
+        background-color: $them-color;
+        color: #fff;
+        border-radius: 5px;
+        min-width: 100px;
+    }
+
+    .btnNext{
+        @extend .btnPre;
+    }
+
+    .disable{
+        @extend .btnPre;
+        cursor: not-allowed;
+    }
+
+}
+

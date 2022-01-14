@@ -1,0 +1,147 @@
+{% extends "admin/base-stats.html" %}
+{% block content %}
+<div class="container-fluid">
+<div class="row">
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Total</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{total}}</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                New (In recent years)</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{num_by_years}}</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">New (Recent month)
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{num_by_month}}</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pending Requests Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                 Rise (Month)</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{raise}} %</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-chart-line fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800">Post Job</h1>
+
+                    <!-- Content Row -->
+                    <div class="row justify-content-center">
+                        <div class="col-xl-8 col-lg-7">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                        class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Posted by category</h6>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="chart-pie">
+                                        <canvas id="myPieChart"></canvas>
+                                    </div>
+                                    <hr>
+                                    Statistics on the number of articles by category of the job website
+                                    <code><strong>T&T</strong></code> .
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10">
+
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Number Of Posts By Month</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-bar">
+                                        <canvas id="myBarChart"></canvas>
+                                    </div>
+                                    <hr>
+                                    Statistics on the number of articles by month in 2021 of the job website
+                                    <code><strong>T&T</strong></code> .
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+<span id="hideLabel" style="display: none">{{listCatename}}</span>
+<span id="hideData" style="display: none">{{DataCate}}</span>
+
+<script type="text/javascript">
+    let applyLabel = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        applyData = {{postStats}};
+
+    let label = document.getElementById('hideLabel').innerText;
+    label = label.replace(/'/g, '"');
+    label = JSON.parse(label);
+    let data = document.getElementById('hideData').innerText;
+    data = data.replace(/'/g, '"');
+    data = JSON.parse(data);
+<!--    let color = ['#4e73df', '#1cc88a', '#36b9cc'], hoverColor = [];-->
+    color = label.map(i => "#" + Math.floor(Math.random()*16777215).toString(16));
+    console.log(color);
+    hoverColor = color.map(i => i+'ad');
+
+    window.onload = (event) => {
+
+        barChar('myBarChart', applyLabel, applyData);
+        pieChart('myPieChart', label, data, color, hoverColor);
+    }
+
+</script>
+{% endblock %}

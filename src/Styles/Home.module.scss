@@ -1,0 +1,71 @@
+.banner{
+    background-image: url("../Assets/Images/banner.png");
+    background-color: #cccccc;
+    height: 450px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    border-bottom-right-radius: 70px;
+    margin-top: 10px;
+    .content{
+        width: 25%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 120px;
+        justify-content: center; 
+        .headers{
+            text-align: left;
+            font-weight: bold;
+        }
+        .subContent{
+            font-size: 16px;
+            color: #666;
+        }
+    }
+}
+.itemContainer{
+    margin: 50px auto;
+    .headers{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .search{
+        width: 75%;
+        padding: 50px;
+        margin: 0 auto;
+        background: linear-gradient(#ff9e0d, #ffc277) ;
+    
+    }
+
+    .cardContainer{
+        width: 75%;
+        margin: 0 auto;
+        border: none;
+    }
+
+    .cardItem{
+        width:50%;
+        margin: 15px auto;
+        border-radius: 0.25rem !important;
+    }
+
+    .btnNext{
+        padding: 0 50px;
+        margin: auto;
+        display: block;
+        text-align: center;
+    }
+}
+
+.darkItemContainer{
+    @extend .itemContainer;
+    background-color: #cccccc8a;
+    padding: 60px 0;
+}
+
+img{
+    width: 100%;
+}

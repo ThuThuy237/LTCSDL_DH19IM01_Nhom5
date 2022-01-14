@@ -1,0 +1,73 @@
+.cardInfo{
+    border : 1px solid #cdcdcd;
+    border-radius : 20px;
+    box-shadow: 2px 2px #cdcdcd;
+    position: relative;
+
+    .editBtn{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px 20px;
+    }
+}
+.titlePage{
+    span{
+        font-family: 'Montserrat', sans-serif;
+        margin: 50px;
+        background-image: linear-gradient(to right, orange, #bd5cfd);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: cover;
+        background-position: center;
+
+        &::before{
+            display: inline-block;
+            content: " ";
+            width: 5px;
+            background-color: cornflowerblue;
+            border-radius: 5px;
+            height: 30px;
+            margin-right: 30px;
+        }
+    }
+}
+.avaName{
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-family: Lucida Sans, Verdana, Arial, sans-serif;
+    color: royalblue;
+}
+.rowInfo{
+    padding: 10px 20px;
+    border-bottom: 1px solid #dddddd75;
+
+    .grayLabel{
+        color: darkgray;
+    }
+}
+
+#changeAvaContainer{
+    position: relative;
+
+    .cam{
+        display: none;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #565656;
+
+        span{
+            display: contents;
+        }
+    }
+
+    &:hover{
+        .cam{
+            display: block;
+            opacity: 0.8;
+            cursor: pointer;
+        }
+    }
+}

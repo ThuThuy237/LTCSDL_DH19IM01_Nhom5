@@ -1,0 +1,43 @@
+.register{
+    display: flex;
+    height:100vh;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #222;
+    font-weight: 400;
+    font-family: 'Montserrat';
+  }
+  .registerContainer{
+    width: 40%;
+    background-color: #fff;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 50px ;
+
+    .phoneInput{
+        input{
+            height: 50px;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-variant: tabular-nums;
+            list-style: none;
+            font-feature-settings: 'tnum', "tnum";
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            min-width: 0;
+            padding: 4px 11px;
+            color: rgba(0, 0, 0, 0.85);
+            font-size: 14px;
+            line-height: 1.5715;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #d9d9d9;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+    }
+  }

@@ -1,0 +1,15 @@
+.bgLogo{
+    position: relative;
+    background-image: url("https://img.freepik.com/free-vector/summer-themed-banner-design_1048-12364.jpg?size=626&ext=jpg");
+    background-size: cover;
+    margin-bottom: 50px;
+    min-height: 100px;
+
+    .logo{
+        position: absolute;
+        background-color: #cdcdcd;
+        bottom: 0;
+        right: 50%;
+        transform: translate(50%, 50%);
+    }
+}
