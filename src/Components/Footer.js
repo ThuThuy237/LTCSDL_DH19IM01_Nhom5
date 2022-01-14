@@ -12,8 +12,8 @@ export default function Footer() {
     return (
         <div className={myStyles.footer}>
             <Row justify="center" >
-                <Col span={3}>
-                    <h2>Explore T&T</h2>
+                <Col span={5}>
+                    <h2>Explore Humanisto</h2>
                     <p>Sign up</p>
                     <p>Login</p>
                     <p>About my app</p>
@@ -36,7 +36,7 @@ export default function Footer() {
                 </Col>
             </Row>
             <Row justify="center" style={{paddingTop:'25px'}}>
-                <Col span={3}>&copy; 2021 Created by TT and BT</Col>
+                <Col span={5}>&copy; 2021 Created by Humanisto team</Col>
                 <Col span={3} offset={2}></Col>
                 <Col span={6} offset={2}>
                 <FacebookOutlined className={myStyles.icon} />

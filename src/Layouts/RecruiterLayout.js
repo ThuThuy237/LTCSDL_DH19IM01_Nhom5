@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import RecruiterRightMenu from '../Components/RecruiterRightMenu';
 import { Layout } from 'antd';
-import tt from '../Assets/Images/tt.png';
+import tt from '../Assets/Images/logo_v.png';
 import { useSelector } from 'react-redux';
 import Forbidden from '../Components/Forbidden';
 

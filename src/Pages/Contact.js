@@ -25,7 +25,7 @@ export default function contact() {
                     <Col><WechatFilled className={styles.icon}/></Col>
                     <Col><strong>Contact Customer Support</strong> </Col>
                     <Col><em>Sometimes you need a little help from your friends. Or a HubSpot support rep. Don’t worry… we’re here for you.</em></Col>
-                    <Col> mail: <a href="mailto:webmaster@example.com"> T&T@jobHrent.com </a></Col>
+                    <Col> mail: <a href="mailto:webmaster@example.com"> support@humanisto.vn </a></Col>
                 </Col>
             </Row>
         </>

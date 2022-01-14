@@ -2,6 +2,11 @@ import React from 'react';
 import styles from '../Styles/About.module.scss';
 import { TeamOutlined, FundProjectionScreenOutlined, GlobalOutlined, ClockCircleOutlined } from '@ant-design/icons';
 import { Row, Col, Card } from 'antd';
+import tt1 from '../Assets/Images/tt1.png';
+import hk from '../Assets/Images/hk.png';
+import tn from '../Assets/Images/tn.png';
+import pt from '../Assets/Images/pt.png';
+import nl from '../Assets/Images/nl.png';
 
 export default function About() {
     return (
@@ -95,18 +100,42 @@ export default function About() {
                     <div className={styles.line}></div>
                     <div className={styles.content}>
                         <Row justify={'space-around'} style={{width : '100%', marginTop:' 5px'}}>
-                            <Col xl={{span: 6}}>
+                            <Col xl={{span: 4}}>
                                 <Card
                                     style={{ maxWidth: 300 }}
-                                    cover={<img alt="example" src="https://png.pngtree.com/png-clipart/20200709/original/pngtree-initial-letter-b-logo-design-png-image_3579669.jpg" />}
+                                    cover={<img alt="example" src={hk} />}
                                 >
-                                    Bảo Trân
+                                    Hoài Khang
                                 </Card>
                             </Col>
-                            <Col xl={{span: 6}}>
+                            <Col xl={{span: 4}}>
                                 <Card
                                     style={{ maxWidth: 300 }}
-                                    cover={<img alt="example" src="https://png.pngtree.com/png-clipart/20200709/original/pngtree-initial-letter-tt-logo-template-png-image_3582070.jpg" />}
+                                    cover={<img alt="example" src={nl} />}
+                                >
+                                    Ngọc Lan
+                                </Card>
+                            </Col>
+                            <Col xl={{span: 4}}>
+                                <Card
+                                    style={{ maxWidth: 300 }}
+                                    cover={<img alt="example" src={pt} />}
+                                >
+                                    Phương Thảo
+                                </Card>
+                            </Col>
+                            <Col xl={{span: 4}}>
+                                <Card
+                                    style={{ maxWidth: 300 }}
+                                    cover={<img alt="example" src={tn} />}
+                                >
+                                    Thanh Ngân
+                                </Card>
+                            </Col>
+                            <Col xl={{span: 4}}>
+                                <Card
+                                    style={{ maxWidth: 300 }}
+                                    cover={<img alt="example" src={tt1} />}
                                 >
                                     Thu Thủy
                                 </Card>

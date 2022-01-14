@@ -9,7 +9,7 @@ export default function MyHeader() {
 
     return (
         <Row id={myStyles.myHeader}>
-            <Col className={myStyles.imageContainer} span={4}>
+            <Col className={myStyles.imageContainer} span={5}>
                 <div className={myStyles.logo}>
                     <Logo />
                 </div>

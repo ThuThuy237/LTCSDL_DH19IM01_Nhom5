@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from "react-router-dom";
 import { FcGoogle } from 'react-icons/fc';
 import { GoogleLogin } from 'react-google-login';
-import tt from '../Assets/Images/tt.png';
+import tt from '../Assets/Images/tt_trans.png';
 
 export default function Login() {
     let history = useHistory();

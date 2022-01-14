@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import UserRightMenu from '../Components/UserRightMenu';
 import { Layout } from 'antd';
-import tt from '../Assets/Images/tt.png';
+import tt from '../Assets/Images/logo_v.png';
 import { useSelector } from 'react-redux';
 
 const { Header, Sider, Content, Footer } = Layout;
