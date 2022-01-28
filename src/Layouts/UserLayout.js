@@ -39,7 +39,7 @@ export default function UserLayout({ children }) {
                     >
                         {children}
                     </Content>
-                    <Footer style={{ textAlign: 'center' }}>T&T Design ©2021 Created by TT and BT</Footer>
+                    <Footer style={{ textAlign: 'center' }}>T&T Design ©2021 Created by Humanisto</Footer>
                 </Layout>
             </Layout>
             : "not a user"}

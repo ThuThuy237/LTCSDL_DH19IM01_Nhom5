@@ -80,7 +80,6 @@ class UserViewSet(viewsets.ViewSet, generics.ListAPIView, generics.CreateAPIView
 
 
 class PostViewSet(viewsets.ViewSet,generics.CreateAPIView, generics.ListAPIView, generics.RetrieveAPIView, generics.UpdateAPIView):
-
      queryset = Post.objects.all()
      serializer_class = PostSerializers
      pagination_class = StandardResultsSetPagination
